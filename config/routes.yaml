@@ -5,4 +5,8 @@ controllers:
 index:
     path: /index
     controller: App\Controller\PageRenderController::index
+   
+registration:
+    path: /registration
+    controller: App\Controller\RegistrationController::index
 
