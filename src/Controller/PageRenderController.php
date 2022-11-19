@@ -5,14 +5,12 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class LuckyController extends AbstractController
+class PageRenderController extends AbstractController
 {
-    public function number(): Response
+    public function index(): Response
     {
-        $number = random_int(0, 100);
-
         return $this->render(
-            'layout.html.twig'
+            'main.html.twig'
         );
     }
 }
