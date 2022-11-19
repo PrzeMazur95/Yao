@@ -2,6 +2,10 @@ controllers:
     resource: ../src/Controller/
     type: attribute
 
+index:
+    path: /index
+    controller: App\Controller\PageRenderController::index
+   
 registration:
     path: /registration
     controller: App\Controller\RegistrationController::index

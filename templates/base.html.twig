@@ -2,18 +2,44 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Welcome on Yao!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+            <link href="{{ asset('css/materialize.css') }}" rel="stylesheet"/>
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div>
+            <header class="row">
+              <nav>
+                <div class="nav-wrapper #7986cb indigo lighten-1">
+                <a href="#" class="brand-logo grey-text text-lighten-3">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="grey-text text-lighten-3"><a href="sass.html">Sass</a></li>
+                    <li class="grey-text text-lighten-3"><a href="badges.html">Components</a></li>
+                    <li class="grey-text text-lighten-3"><a href="collapsible.html">JavaScript</a></li>
+                </ul>
+                </div>
+            </nav>
+            {% block header %}{% endblock %}
+            </header>
+            <main class="row indigo lighten-4">
+            {% block content %}{% endblock %}
+            </main>
+            <footer class="page-footer #c8e6c9 #7986cb indigo lighten-1">
+                {% block footer %}{% endblock %}
+                <div class="footer-copyright">
+                    <div class="container">
+                    © 2022 All rights reserved to Majk'n'Bradley
+                    <a class="grey-text text-lighten-4 right" href="#!">Here maybe links to FB etc.</a>
+                    </div>
+                </div>
+                    <script src="{{ asset('js/materialize.js') }}"></script>
+                    <script
+                    src="https://code.jquery.com/jquery-3.6.1.min.js"
+                    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+                    crossorigin="anonymous"></script>
+                {% block javascripts %}{% endblock %}
+            </footer>
+        </div>
     </body>
 </html>
