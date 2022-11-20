@@ -10,3 +10,7 @@ registration:
     path: /registration
     controller: App\Controller\RegistrationController::index
 
+user_index:
+    path: /users
+    controller: App\Controller\UserController::index
+
