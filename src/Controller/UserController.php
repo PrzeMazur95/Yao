@@ -10,9 +10,15 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class UserController extends AbstractController
 {
-    public function index(UserRepository $repo): Response
+
+    public function create(ManagerRegistry $doctrine)
     {
-        $user = $repo->findBy([]);
+        $entityManagar = $doctrine->getManager();
+
+        $user = new User();
+
+        $user->setFirstName(3);
+
         return $this->json($user);
     }
 }
