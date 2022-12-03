@@ -1,10 +1,6 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
-
-index:
-    path: /index
-    controller: App\Controller\PageRenderController::index
    
 user_index:
     path: /users
