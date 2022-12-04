@@ -13,3 +13,7 @@ registration:
 login:
     path: /login
     controller: App\Controller\LoginController::index
+
+welcome:
+    path: /welcome
+    controller: App\Controller\PageRenderController::welcome
