@@ -1,0 +1,13 @@
+{% extends 'welcomeBase.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/welcome.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="main">
+        <a class="waves-effect waves-light btn-large">Login</a>
+        <a class="waves-effect waves-light btn-large">Register</a>
+    </div>
+</div>
+{% endblock %}
