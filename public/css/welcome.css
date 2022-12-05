@@ -4,3 +4,11 @@
     margin-left: 20%;
     font-weight: bold;
 }
+
+.welcomeMsg {
+    margin-top: 20%;
+    margin-left: 20%;
+    font-size: xx-large;
+    font-weight: bold;
+    color: gray;
+}
