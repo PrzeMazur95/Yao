@@ -13,4 +13,11 @@ class PageRenderController extends AbstractController
             'main.html.twig'
         );
     }
+
+    public function welcome(): Response
+    {
+        return $this->render(
+            'welcome/welcome.html.twig'
+        );
+    }
 }
